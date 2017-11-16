@@ -1,6 +1,6 @@
 {
   "name": "server-side-render-resource",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "server side render resource dependence",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,10 @@
     "server-side-render",
     "vue",
     "react"
+  ],
+  "files": [
+    "index.js",
+    "lib"
   ],
   "author": "hubcarl@126.com",
   "license": "MIT",
