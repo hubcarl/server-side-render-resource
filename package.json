@@ -1,0 +1,19 @@
+{
+  "name": "server-side-render-resource",
+  "version": "0.1.0",
+  "description": "server side render resource dependence",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "server-side-render",
+    "vue",
+    "react"
+  ],
+  "author": "hubcarl@126.com",
+  "license": "MIT",
+  "dependencies": {
+    "serialize-javascript": "^1.4.0"
+  }
+}
