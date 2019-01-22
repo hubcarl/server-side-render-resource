@@ -1,0 +1,21 @@
+{
+  "common.js": "/public/js/chunk/common.e525d392.js",
+  "runtime.js": "/public/js/runtime.abe9d429.js",
+  "search.js": "/public/js/chunk/search.7cb3c087.js",
+  "test.js": "/public/js/chunk/test.7cb3c087.js",
+  "deps": {
+    "search.js": {
+      "js": [
+        "/public/js/runtime.abe9d429.js",
+        "/public/js/chunk/common.e525d392.js",
+        "/public/js/chunk/search.7cb3c087.js"
+      ],
+      "css": [ "/public/css/search.abe9d478.css"]
+    }
+  },
+  "info": {
+    "publicPath": "/public/",
+    "buildPath": "public",
+    "mapped": true
+  }
+}
