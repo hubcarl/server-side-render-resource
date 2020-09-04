@@ -125,6 +125,31 @@ describe('resource.test.js', () => {
       expect(html).to.contain('<script> window.__INITIAL_STATE__= {};</script>');
       expect(html).to.contain('<script type="text/javascript" crossorigin="use-credentials" src="/public/js/chunk/common.e525d392.js"></script>');
     });
+    it('should html injectRes for manifest url defer test', () => {
+      const conf = {
+        ...config,
+        defer: true,
+        manifest: path.join(__dirname, './manifest.json'),
+      };
+      const resource = new Resource(app, conf);
+      const layout = fs.readFileSync(path.join(__dirname, 'layout.html'), 'utf8');
+      const html = resource.inject(layout, 'search.js');
+      expect(html).to.contain('<script> window.__INITIAL_STATE__= {};</script>');
+      expect(html).to.contain('<script type="text/javascript" defer src="/public/js/chunk/common.e525d392.js"></script>');
+    });
+    it('should html injectRes for manifest url crossorigin && defer test', () => {
+      const conf = {
+        ...config,
+        crossorigin: true,
+        defer: true,
+        manifest: path.join(__dirname, './manifest.json'),
+      };
+      const resource = new Resource(app, conf);
+      const layout = fs.readFileSync(path.join(__dirname, 'layout.html'), 'utf8');
+      const html = resource.inject(layout, 'search.js');
+      expect(html).to.contain('<script> window.__INITIAL_STATE__= {};</script>');
+      expect(html).to.contain('<script type="text/javascript" crossorigin="anonymous" defer src="/public/js/chunk/common.e525d392.js"></script>');
+    });
     it('should html injectRes for manifest json config test', () => {
       const conf = {
         ...config,
